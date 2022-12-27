@@ -1,0 +1,57 @@
+<mat-toolbar color="white">
+    <button mat-icon-button (click)="snav.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span><img srcset="./assets/keep.png" width="40px"/></span>
+    <span style="margin-left:5px">Keep</span>
+    <!-- <div class="input-group">
+        <div class="form-outline">
+          <input type="search" id="form1" class="item1" />
+        </div>
+        
+      </div> -->
+      <div class="search">
+        <mat-icon matPrefix>search</mat-icon>
+        <input matInput style="height:30px;width: 50vw;"/>
+        
+      </div>
+
+      <div class="row">
+        <span>
+          <img srcset="./assets/refresh.png" width="30px"/>
+        </span>
+        <span>
+          <img srcset="./assets/dns.png" width="30px"/>
+        </span>
+        <span>
+          <img srcset="./assets/settings.png" width="30px"/>
+        </span>
+      </div>
+      <div class="row">
+        <span>
+          <img srcset="./assets/apps.png" width="30px"/>
+        </span>
+        <span>
+          <img srcset="./assets/account_circle.png" width="30px"/>
+        </span>
+      </div>
+</mat-toolbar>
+  
+
+<mat-sidenav-container >
+      <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                   [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" class="sidenav-container">
+        <mat-nav-list class="listset">
+          <a mat-list-item><img srcset="./assets/lightbulb.png" width="25px" style="margin-top: 0px; margin-right: 30px;"/>Notes</a>
+          <a mat-list-item><img srcset="./assets/notifications.png" width="25px" style="margin-top: 0px; margin-right: 30px;"/>Reminders</a>
+          <a mat-list-item><img srcset="./assets/edit.png" width="25px" style="margin-top: 0px; margin-right: 30px;"/>Edit labels</a>
+          <a mat-list-item><img srcset="./assets/archive.png" width="25px" style="margin-top: 0px; margin-right: 30px;"/>Archieve</a>
+          <a mat-list-item><img srcset="./assets/delete.png" width="25px" style="margin-top: 0px; margin-right: 30px;"/>Trash</a>
+        </mat-nav-list>
+      </mat-sidenav>
+      <mat-sidenav-content>
+        <div style="height:88vh;">
+        </div>
+      </mat-sidenav-content>
+    </mat-sidenav-container>
+

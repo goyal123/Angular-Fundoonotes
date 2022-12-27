@@ -1,0 +1,128 @@
+<div class="Container">
+  <div class="Container1">
+    <div class="imageset">
+      <img srcset="/assets/logo2.PNG"/>
+    </div>
+    <div class="Box1">
+      <h1>Create Your Google Account</h1>
+    </div>
+  <form [formGroup]="registrationform" (ngSubmit)="onSubmit()">
+    <div class="Box2">
+      <span>
+        <mat-form-field appearance="outline">
+          <mat-label>Firstname</mat-label>
+          <input formControlName="fname" matInput placeholder="" required>
+          <!-- <mat-error>Firstname required</mat-error> -->
+        </mat-form-field>
+        <div *ngIf="f['fname'].invalid && f['fname'].touched">
+        <div *ngIf="f['fname'].errors && f['fname'].errors['required']" class="leftside4">
+          <mat-error>firstname required</mat-error>
+        </div>
+        <div *ngIf="f['fname'].errors && f['fname'].errors['pattern']" class="leftside4">
+          <mat-error>Min 3 characters</mat-error>
+        </div>
+      </div>
+      </span>
+      <span>
+        <mat-form-field appearance="outline">
+          <mat-label>Lastname</mat-label>
+          <input formControlName="lname" matInput placeholder="" required>
+          <!-- <mat-error>lastname required</mat-error> -->
+        </mat-form-field>
+        <div *ngIf="f['lname'].invalid && f['lname'].touched">
+          <div *ngIf="f['lname'].errors && f['lname'].errors['required']" class="leftside4">
+            <mat-error>lastname required</mat-error>
+          </div>
+          <div *ngIf="f['lname'].errors && f['lname'].errors['pattern']" class="leftside4">
+            <mat-error>Min 3 characters</mat-error>
+          </div>
+        </div>
+      </span>
+      
+  </div>
+<br>
+
+<div class="Box3">
+    <mat-form-field class="example-full-width" appearance="outline">
+      <mat-label>username</mat-label>
+      <input formControlName="email" matInput placeholder="@gmail.com" required>
+      <!-- <mat-error>email required</mat-error> -->
+    </mat-form-field>
+    
+  </div>
+  <br>
+  <div *ngIf="f['email'].invalid && f['email'].touched">
+    <div *ngIf="f['email'].errors && f['email'].errors['required']" class="leftside3">
+      <mat-error>email required</mat-error>
+    </div>
+    <div *ngIf="f['email'].errors && f['email'].errors['pattern']" class="leftside3">
+      <mat-error>invalid email</mat-error>
+    </div>
+  </div>
+  <br>
+
+<div class="textset">
+  You can use letters,numbers & specials
+</div>
+<br>
+<div class="lastlabel">
+  <button style="color:blue" mat-button>Use my current email address</button>
+</div>
+
+<div class="Box2">
+  <span>
+    <mat-form-field appearance="outline">
+      <mat-label>Password</mat-label>
+      <input  type="password" formControlName="password" matInput placeholder="" required>
+      <mat-error>password required</mat-error>
+    </mat-form-field>
+  </span>
+
+
+  <span>
+    <mat-form-field appearance="outline">
+      <mat-label>Confirm</mat-label>
+      <input type="password" formControlName="cnfpassword" matInput placeholder="" required>
+      <mat-error>confirm password required</mat-error>
+    </mat-form-field>
+
+  </span>
+</div>
+<br>
+<div class="textset1">
+  Use 8 or more characters with a mix of letters, numbers & symbols
+</div>
+<div class="Checkbox">
+  <input type="checkbox">
+  <label>Show Password</label>
+</div>
+
+<div class="lastlabel">
+  <span class="item1">
+    <button style="color:blue" mat-button>Sign in Instead</button>
+  </span>
+  <span>
+    <button mat-raised-button color="primary">Next</button>
+  </span>
+  
+</div>
+</form>
+</div>
+
+
+<div class="Container2">
+  <div class="Column2">
+    <img srcset="/assets/logo1.png" width="250px"/>
+    <div>
+      One Account. All of Google 
+    </div>
+    <div class="textfix">
+      working for you 
+    </div>
+  </div>
+  
+</div>
+
+</div>
+
+<!-- {{registrationform.value | json}} -->

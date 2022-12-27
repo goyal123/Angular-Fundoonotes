@@ -1,0 +1,31 @@
+<div class="Container">
+    <div class='imgset'>
+        <img srcset="/assets/logo2.PNG"/>
+    </div>
+    <div class='item1'>
+        <div>
+            <h1>Find your email</h1>
+        </div>
+        <div>
+            <h3>Enter your phone number or recovery email</h3>
+        </div>
+        
+    </div>
+    <form [formGroup]="forgetpassform" (ngSubmit)="onSubmit()">
+    <div class="inputlabel">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>username</mat-label>
+          <input formControlName="email" matInput placeholder="@gmail.com">
+        </mat-form-field>
+      </div>
+    
+    
+    <br>
+    <div class="lastlabel">
+        <span>
+          <button mat-raised-button color="primary">Next</button>
+        </span>
+        
+      </div>
+    </form>
+</div>

