@@ -17,7 +17,12 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {SidenavComponent } from './sidenav/sidenav.component'; 
 import { MatSidenavModule } from '@angular/material/sidenav';
-import {MatListModule} from '@angular/material/list'; 
+import {MatListModule} from '@angular/material/list';
+import { NoteiconsComponent } from './noteicons/noteicons.component';
+import { CreatenoteComponent } from './createnote/createnote.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { GetallnotesComponent } from './getallnotes/getallnotes.component';
+import { DisplaynotesComponent } from './displaynotes/displaynotes.component'; 
 
 @NgModule({
   declarations: [
@@ -27,7 +32,12 @@ import {MatListModule} from '@angular/material/list';
     ForgotemailComponent,
     ResetpasswdComponent,
     HeaderComponent,
-    SidenavComponent
+    SidenavComponent,
+    NoteiconsComponent,
+    CreatenoteComponent,
+    DashboardComponent,
+    GetallnotesComponent,
+    DisplaynotesComponent
   ],
   imports: [
     BrowserModule,

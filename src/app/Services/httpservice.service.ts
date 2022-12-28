@@ -9,7 +9,7 @@ export class HttpserviceService {
   postservice(url:string,reqdata:any,token:boolean=false,httpOptions:any){
     return this.httpclient.post(url,reqdata,token && httpOptions)
   }
-  getservice(){
-
+  getservice(url:string,token:boolean=false,httpOptions:any){
+    return this.httpclient.get(url,token&&httpOptions)
   }
 }

@@ -1,0 +1,30 @@
+<form [formGroup]="noteform" (ngSubmit)="onSubmit()">
+    <div *ngIf="!show" class="titlecontainer">
+        <input id="text" class="note-section-new" placeholder="Title" formControlName="title"
+            type="text">
+        <input id="text" class="note-section-new" placeholder="Description" formControlName="description"
+            type="text">
+        <div class="rowsection">
+            <app-noteicons></app-noteicons>
+            <button mat-button class="btn-close">Close</button>
+        </div>    
+        
+    </div>
+    <div class="note1container" *ngIf="show" (click)="isShow()">
+        <input name="text" id="text" class="note-section" placeholder="Take a note..."
+            formControlName="description">
+            <div class="note1container2">
+                <div>
+                    <img srcset="./assets/check_box.png" width="40px"/>
+                </div>
+                <div>
+                    <img srcset="./assets/edit.png" width="40px"/>
+                </div>
+                <div>
+                    <img srcset="./assets/imagesmode.png" width="40px"/>
+                </div>
+                  
+            </div>
+    </div>
+    
+</form>

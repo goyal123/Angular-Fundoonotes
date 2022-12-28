@@ -38,7 +38,7 @@
 </mat-toolbar>
   
 
-<mat-sidenav-container >
+<mat-sidenav-container>
       <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
                    [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" class="sidenav-container">
         <mat-nav-list class="listset">
@@ -51,7 +51,9 @@
       </mat-sidenav>
       <mat-sidenav-content>
         <div style="height:88vh;">
+          <router-outlet></router-outlet>
         </div>
+        <
       </mat-sidenav-content>
     </mat-sidenav-container>
 

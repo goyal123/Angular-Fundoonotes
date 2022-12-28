@@ -8,28 +8,31 @@ import { UserService } from 'src/app/Services/user.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  constructor(private formBuilder:FormBuilder,private user:UserService){}
+  constructor(private formBuilder: FormBuilder, private user: UserService) { }
 
   submitted = false;
   loginform = new FormGroup({
-    email:new FormControl('',[Validators.required,Validators.pattern("^([0-9a-zA-Z])+([.+-][0-9a-zA-Z]+)?@([0-9a-zA-Z])+([.][a-zA-Z]{2,4})([.][a-zA-Z]{2})?$")]),
-    password:new FormControl('',[Validators.required])
+    email: new FormControl('', [Validators.required, Validators.pattern("^([0-9a-zA-Z])+([.+-][0-9a-zA-Z]+)?@([0-9a-zA-Z])+([.][a-zA-Z]{2,4})([.][a-zA-Z]{2})?$")]),
+    password: new FormControl('', [Validators.required])
   })
 
-get f(){
-  return this.loginform.controls;
-}
+  get f() {
+    return this.loginform.controls;
+  }
 
-onSubmit() {
-  this.submitted = true;
-  if (this.loginform.valid) {
-    let payload={
-      email:this.loginform.value.email,
-      password:this.loginform.value.password
+  onSubmit() {
+    this.submitted = true;
+    if (this.loginform.valid) {
+      let payload = {
+        email: this.loginform.value.email,
+        password: this.loginform.value.password
+      }
+      this.user.login(payload).subscribe((response: any) => { 
+        console.log(response)
+        localStorage.setItem("token",response.data)
+       })
     }
-    this.user.login(payload).subscribe((response:any)=>{console.log(response)})
-}
-}
+  }
 
 
 
