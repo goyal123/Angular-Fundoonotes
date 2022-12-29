@@ -1,0 +1,26 @@
+.note3container{
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    width: 20vw;
+    height: auto;
+    border: 1px solid black;
+    margin-right: 10px;
+    border-radius: 1mm;
+    
+}
+
+.maincontainer{
+    display: flex;
+    flex-direction: row;
+    width: 80vw;
+    height: auto;
+    background-color: '';
+    margin-left: 100px;
+    border: '';
+}
+
+.row1{
+    margin-left: 10px;
+    height: 2vw;
+}

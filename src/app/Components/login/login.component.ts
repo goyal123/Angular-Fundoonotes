@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserService } from 'src/app/Services/user.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { UserService } from 'src/app/Services/user.service';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-  constructor(private formBuilder: FormBuilder, private user: UserService) { }
+  constructor(private formBuilder: FormBuilder, private user: UserService,private router:Router) { }
 
   submitted = false;
   loginform = new FormGroup({
@@ -30,6 +31,7 @@ export class LoginComponent {
       this.user.login(payload).subscribe((response: any) => { 
         console.log(response)
         localStorage.setItem("token",response.data)
+        this.router.navigateByUrl('/dashboard/getallnotes')
        })
     }
   }

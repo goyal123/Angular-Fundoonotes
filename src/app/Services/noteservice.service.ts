@@ -30,4 +30,24 @@ export class NoteserviceService {
     return this.httpservice.getservice(`https://localhost:44323/api/Notes/GetNote`,true,header)
   }
 
+  trashed(reqdata:any){
+    let header={
+      headers: new HttpHeaders({
+        'Content-Type':'application/json',
+        'Authorization':'Bearer '+this.token
+      })
+    }
+    return this.httpservice.patchservice(`https://localhost:44323/api/Notes/IsTrashed?noteId=${reqdata}`,reqdata,true,header)
+  }
+
+  Archieve(reqdata:any){
+    let header={
+      headers: new HttpHeaders({
+        'Content-Type':'application/json',
+        'Authorization':'Bearer '+this.token
+      })
+    }
+    return this.httpservice.patchservice(`https://localhost:44323/api/Notes/IsArchieve?noteId=${reqdata}`,reqdata,true,header)
+  }
+
 }

@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+import { Component,Input,OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-displaynotes',
   templateUrl: './displaynotes.component.html',
   styleUrls: ['./displaynotes.component.scss']
 })
-export class DisplaynotesComponent {
-
+export class DisplaynotesComponent implements OnInit{
+  @Input() noteArray:any
+  ngOnInit() {
+    console.log(this.noteArray);
+    }
 }

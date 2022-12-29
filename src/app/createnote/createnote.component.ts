@@ -16,17 +16,18 @@ export class CreatenoteComponent {
   })
 
   isShow(){
-    this.show=false;
+    this.show=!this.show;
   }
 
   onSubmit() {
     this.submitted = true;
+    this.isShow()
     if (this.noteform.valid) {
       let payload={
         title:this.noteform.value.title,
         description:this.noteform.value.description
       }
       this.note.createnote(payload).subscribe((response:any)=>{console.log(response)})
-  }
+    }
   }
 }

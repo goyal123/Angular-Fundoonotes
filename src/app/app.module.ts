@@ -23,7 +23,7 @@ import { CreatenoteComponent } from './createnote/createnote.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { GetallnotesComponent } from './getallnotes/getallnotes.component';
 import { DisplaynotesComponent } from './displaynotes/displaynotes.component'; 
-
+import {MatMenuModule} from '@angular/material/menu';
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,7 +51,8 @@ import { DisplaynotesComponent } from './displaynotes/displaynotes.component';
     MatIconModule,
     MatToolbarModule,
     MatSidenavModule,
-    MatListModule
+    MatListModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]
