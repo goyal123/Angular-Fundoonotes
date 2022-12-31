@@ -1,0 +1,19 @@
+<div class="main">
+    <div>
+        <input type="text" class="texttitle"  [(ngModel)]="title">
+    </div>
+    <br>
+    <div>
+        <input type="text" class="texttitle"  [(ngModel)]="description">
+    </div>
+    <br>
+    <div class="lastrow">
+        <span>
+            <app-noteicons [noteID]="noteId"></app-noteicons>
+        </span>
+        <span>
+            <button mat-button class="closebutton" (click)="updatenote()">Close</button>
+        </span>
+    </div>
+    
+</div>

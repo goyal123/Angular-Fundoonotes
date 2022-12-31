@@ -6,6 +6,7 @@
     width: 46vw;
     height: 8vh;
     border: 1px solid black;
+    border-radius: 2px;
 }
 
 .note1container2{
@@ -27,7 +28,7 @@
 .note-section-new{
     width: 45.5vw;
     height: 15vh;
-    border: '';
+    border: none;
 }
 
 .titlecontainer{
@@ -38,6 +39,7 @@
     width: 46vw;
     height: 18vh;
     border: 1px solid black;
+    border-radius: 2px;
     
       
 }
@@ -46,4 +48,5 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    background-color: white;
 }

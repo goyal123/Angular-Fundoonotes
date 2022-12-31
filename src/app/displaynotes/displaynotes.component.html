@@ -1,7 +1,7 @@
 <div  class="maincontainer">
 <div *ngFor="let note of noteArray">
     <div class="note3container">
-        <span class="row1">{{note.title}}</span>
+        <span class="row1" (click)="openDialog(note)">{{note.title}}</span>
         <span class="row1">{{note.description}}</span>
         <!-- <span>{{note.noteID}}</span> -->
          <app-noteicons [noteID]="note.noteID"></app-noteicons>

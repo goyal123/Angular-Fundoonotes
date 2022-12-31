@@ -1,0 +1,17 @@
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+.texttitle{
+    border: none;
+    font-size: 15px;
+    height: 30px;
+    width: 39.5vw;
+}
+
+.lastrow{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

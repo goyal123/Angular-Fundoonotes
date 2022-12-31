@@ -16,4 +16,9 @@ export class HttpserviceService {
   patchservice(url:string,reqdata:any,token:boolean=false,httpOptions:any){
     return this.httpclient.patch(url,reqdata,token && httpOptions)
   }
+
+  putservice(url:string,reqdata:any,token:boolean=false,httpOptions:any){
+    return this.httpclient.put(url,reqdata,token && httpOptions)
+  }
+  
 }

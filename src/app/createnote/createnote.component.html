@@ -1,16 +1,18 @@
 <form [formGroup]="noteform" (ngSubmit)="onSubmit()">
     <div *ngIf="!show" class="titlecontainer">
-        <input id="text" class="note-section-new" placeholder="Title" formControlName="title"
-            type="text" required>
-        <input id="text" class="note-section-new" placeholder="Description" formControlName="description"
-            type="text" required>
+        <input type="text" class="note-section-new" placeholder="Title" formControlName="title"
+             required>
+        <input type="text" class="note-section-new" placeholder="Description" formControlName="description"
+             required>
         <div class="rowsection">
             <app-noteicons></app-noteicons>
             <button type="submit" mat-button class="btn-close">Close</button>
         </div>    
         
     </div>
+
 </form>
+
     <div class="note1container" *ngIf="show" (click)="isShow()">
         <input name="text" id="text" class="note-section" placeholder="Take a note...">
             <div class="note1container2">
@@ -26,4 +28,5 @@
                   
             </div>
     </div>
+
     

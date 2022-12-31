@@ -24,6 +24,12 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { GetallnotesComponent } from './getallnotes/getallnotes.component';
 import { DisplaynotesComponent } from './displaynotes/displaynotes.component'; 
 import {MatMenuModule} from '@angular/material/menu';
+import {MatCardModule} from '@angular/material/card';
+import { UpdatenotesComponent } from './updatenotes/updatenotes.component';
+import { ArchieveComponent } from './archieve/archieve.component';
+import { TrashComponent } from './trash/trash.component';
+import {MatDialogModule, MatDialogRef} from '@angular/material/dialog';
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +43,10 @@ import {MatMenuModule} from '@angular/material/menu';
     CreatenoteComponent,
     DashboardComponent,
     GetallnotesComponent,
-    DisplaynotesComponent
+    DisplaynotesComponent,
+    UpdatenotesComponent,
+    ArchieveComponent,
+    TrashComponent
   ],
   imports: [
     BrowserModule,
@@ -52,9 +61,13 @@ import {MatMenuModule} from '@angular/material/menu';
     MatToolbarModule,
     MatSidenavModule,
     MatListModule,
-    MatMenuModule
+    MatMenuModule,
+    MatCardModule,
+    MatDialogModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
+  
 })
 export class AppModule { }

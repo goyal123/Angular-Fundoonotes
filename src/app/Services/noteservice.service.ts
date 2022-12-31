@@ -50,4 +50,14 @@ export class NoteserviceService {
     return this.httpservice.patchservice(`https://localhost:44323/api/Notes/IsArchieve?noteId=${reqdata}`,reqdata,true,header)
   }
 
+  updatenote(reqdata:any,noteId:any){
+    let header={
+      headers: new HttpHeaders({
+        'Content-Type':'application/json',
+        'Authorization':'Bearer '+this.token
+      })
+    }
+    return this.httpservice.putservice(`https://localhost:44323/api/Notes/UpdateNote?noteId=${noteId}`,reqdata,true,header)
+  }
+
 }
