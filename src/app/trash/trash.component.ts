@@ -10,7 +10,7 @@ export class TrashComponent {
   constructor(private note:NoteserviceService){
 
   }
-
+  notelist:any
   ngOnInit(){
     this.gettrash();
   }
@@ -18,6 +18,12 @@ export class TrashComponent {
   gettrash(){
     this.note.getallnotes().subscribe((response:any)=>{
       console.log(response)
+      this.notelist=response.data
+      this.notelist=this.notelist.filter((note:any)=>{
+        if(note.archieve==false && note.trash==true){
+          return note;
+        }
+      })
     })
   }
 }

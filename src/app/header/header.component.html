@@ -42,11 +42,11 @@
       <mat-sidenav #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
                    [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" class="sidenav-container">
         <mat-nav-list class="listset">
-          <a mat-list-item><img srcset="./assets/lightbulb.png" width="25px" style="margin-top: 0px; margin-right: 30px;"/>Notes</a>
+          <a mat-list-item><img srcset="./assets/lightbulb.png" width="25px" style="margin-top: 0px; margin-right: 30px;" (click)="getallnote()"/>Notes</a>
           <a mat-list-item><img srcset="./assets/notifications.png" width="25px" style="margin-top: 0px; margin-right: 30px;"/>Reminders</a>
           <a mat-list-item><img srcset="./assets/edit.png" width="25px" style="margin-top: 0px; margin-right: 30px;"/>Edit labels</a>
-          <a mat-list-item><img srcset="./assets/archive.png" width="25px" style="margin-top: 0px; margin-right: 30px;"/>Archieve</a>
-          <a mat-list-item><img srcset="./assets/delete.png" width="25px" style="margin-top: 0px; margin-right: 30px;"/>Trash</a>
+          <a mat-list-item><img srcset="./assets/archive.png" width="25px" style="margin-top: 0px; margin-right: 30px;" (click)="archievenote()"/>Archieve</a>
+          <a mat-list-item><img srcset="./assets/delete.png" width="25px" style="margin-top: 0px; margin-right: 30px;" (click)="trashnote()"/>Trash</a>
         </mat-nav-list>
       </mat-sidenav>
       <mat-sidenav-content>

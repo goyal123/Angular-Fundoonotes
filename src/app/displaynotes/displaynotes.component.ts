@@ -17,8 +17,8 @@ export class DisplaynotesComponent implements OnInit{
 
     openDialog(noteArray:any) {
       const dialogRef = this.dialog.open(UpdatenotesComponent,{
-      width: '40vw',
-      height: '150px',
+      width: '39.9vw',
+      height: '190px',
       data: {title: noteArray.title, description: noteArray.description,noteId: noteArray.noteID},
       });
     }

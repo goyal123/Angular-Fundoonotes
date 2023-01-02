@@ -1,12 +1,12 @@
-<div class="main">
+<div class="main"> 
     <div>
-        <input type="text" class="texttitle"  [(ngModel)]="title">
+        <mat-form-field class="texttitle">
+        <input matInput type="text"  [(ngModel)]="title">
+        </mat-form-field>
+        <mat-form-field class="texttitle">
+            <input matInput type="text" class="texttitle"  [(ngModel)]="description">
+        </mat-form-field>
     </div>
-    <br>
-    <div>
-        <input type="text" class="texttitle"  [(ngModel)]="description">
-    </div>
-    <br>
     <div class="lastrow">
         <span>
             <app-noteicons [noteID]="noteId"></app-noteicons>
@@ -15,5 +15,5 @@
             <button mat-button class="closebutton" (click)="updatenote()">Close</button>
         </span>
     </div>
-    
+
 </div>

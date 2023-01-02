@@ -10,7 +10,7 @@ export class ArchieveComponent {
   constructor(private note:NoteserviceService){
 
   }
-
+  notelist:any
   ngOnInit(){
     this.getarchieve();
   }
@@ -18,6 +18,10 @@ export class ArchieveComponent {
   getarchieve(){
     this.note.getallnotes().subscribe((response:any)=>{
       console.log(response)
+      this.notelist=response.data
+      this.notelist=this.notelist.filter((note:any)=>{
+        return note.archieve===true
+      })
     })
   }
 }
