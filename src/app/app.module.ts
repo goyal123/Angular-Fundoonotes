@@ -30,6 +30,9 @@ import { ArchieveComponent } from './archieve/archieve.component';
 import { TrashComponent } from './trash/trash.component';
 import {MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
+import { AuthService } from './Services/auth.service';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -64,9 +67,10 @@ import { FormsModule } from '@angular/forms';
     MatMenuModule,
     MatCardModule,
     MatDialogModule,
-    FormsModule
+    FormsModule,
+    
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
   
 })

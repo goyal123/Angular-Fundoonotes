@@ -6,12 +6,14 @@ import { RegistrationComponent } from './Components/registration/registration.co
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { GetallnotesComponent } from './getallnotes/getallnotes.component';
 import { HeaderComponent } from './header/header.component';
+import { AuthGuard } from './Services/auth.guard';
 import { TrashComponent } from './trash/trash.component';
 
 const routes: Routes = [
   {path:'signup',component:RegistrationComponent},
   {path:'signin',component:LoginComponent},
   {path:'dashboard',component:DashboardComponent,
+  canActivate: [AuthGuard],
   children:[
     {path:'getallnotes',component:GetallnotesComponent},
     {path:'trash',component:TrashComponent},
