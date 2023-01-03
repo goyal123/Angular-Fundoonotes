@@ -60,4 +60,15 @@ export class NoteserviceService {
     return this.httpservice.putservice(`https://localhost:44323/api/Notes/UpdateNote?noteId=${noteId}`,reqdata,true,header)
   }
 
+  colornote(reqdata:any){
+    console.log(reqdata)
+    let header={
+      headers: new HttpHeaders({
+        'Content-Type':'application/json',
+        'Authorization':'Bearer '+this.token
+      })
+    }
+    return this.httpservice.patchservice(`https://localhost:44323/api/Notes/UpdateColor?noteId=${reqdata.noteId}&color=${reqdata.colorId}`,reqdata,true,header)
+  }
+
 }

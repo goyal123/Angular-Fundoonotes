@@ -10,6 +10,10 @@
     width: 39.7vw;
 }
 
+.texttitle:focus{
+    outline: none;
+}
+
 .lastrow{
     display: flex;
     flex-direction: row;

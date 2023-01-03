@@ -14,11 +14,12 @@
 .maincontainer{
     display: flex;
     flex-direction: row;
-    width: 80vw;
+    width: 85vw;
     height: auto;
     background-color: '';
-    margin-left: 100px;
+    margin-left: 150px;
     border: '';
+    flex-wrap: wrap;
 }
 
 .row1{

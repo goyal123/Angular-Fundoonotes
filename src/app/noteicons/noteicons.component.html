@@ -1,13 +1,25 @@
-<div class="rowcontainer">
+<div class="rowcontainer" [style.background-color]="{notecolor}">
     <div>
         <img srcset="./assets/add_alert.png" width="25px" style="margin-right: 10px;"/>
     </div>
     <div>
         <img srcset="./assets/person.png" width="25px" style="margin-right: 10px;"/>
     </div>
+
     <div>
-        <img srcset="./assets/palette.png" width="25px" style="margin-right: 10px;"/>
+        <img [matMenuTriggerFor]="colormenu" srcset="./assets/palette.png" width="25px" style="margin-right: 10px;"/>
+        <mat-menu #colormenu="matMenu" class="colorrow">
+            <div class="colorrow">
+            <div *ngFor="let color of colorarray">
+                <div class="colorbutton" [style.background-color]="color" (click)="updatecolor(color)">
+                    
+                </div>
+            </div>
+            </div>
+        </mat-menu>
+
     </div>
+    
     <div>
         <img srcset="./assets/imagesmode.png" width="25px" style="margin-right: 10px;"/>
     </div>
