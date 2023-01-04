@@ -14,11 +14,14 @@ export class UpdatenotesComponent implements OnInit {
   title:any;
   description:any;
   noteId:any
+  color:any
+  
   ngOnInit(){
     console.log(this.modeldata)
     this.title=this.modeldata.title;
     this.description=this.modeldata.description,
     this.noteId=this.modeldata.noteId
+    this.color=this.modeldata.color
   }
   
   updatenote():void{

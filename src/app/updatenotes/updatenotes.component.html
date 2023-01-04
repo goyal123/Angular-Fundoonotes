@@ -1,13 +1,10 @@
-<div class="main"> 
-    <div>
-        <mat-form-field class="texttitle">
-        <input matInput type="text"  [(ngModel)]="title">
-        </mat-form-field>
-        <mat-form-field class="texttitle">
-            <input matInput type="text" class="texttitle"  [(ngModel)]="description">
-        </mat-form-field>
+<mat-card>
+<div class="main" [style.background-color]="color"> 
+    <div [style.background-color]="color">
+        <input type="text" class="texttitle" [style.background-color]="color" [(ngModel)]="title" >
+        <input type="text" class="texttitle" [style.background-color]="color" [(ngModel)]="description">
     </div>
-    <div class="lastrow">
+    <div class="lastrow" [style.background-color]="color">
         <span>
             <app-noteicons [noteID]="noteId"></app-noteicons>
         </span>
@@ -17,3 +14,4 @@
     </div>
 
 </div>
+</mat-card>

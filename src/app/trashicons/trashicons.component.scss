@@ -1,7 +1,8 @@
 .rowcontainer{
     display: flex;
     flex-direction: row;
-    width:20vw;
+    width:7vw;
+    margin-left:0px;
     height: 40px;
     align-items: center;
     justify-content:space-evenly;
@@ -9,28 +10,11 @@
     
 }
 
-.colorrow{
-    display: flex;
-    flex-direction: row;    
-    width: 30vw;
-   
-}
-
-.colorbutton{
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-    border: 1px solid black;
-    border-radius: 50px;
-}
-
 .image {
-    cursor: pointer;
     position: relative;
   }
 
-.image .text {
-    
+  .image .text {
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -40,6 +24,6 @@
     visibility: hidden;
     border: '';
   }
-.image:hover .text {
+  .image:hover .text {
     visibility: visible;
   }

@@ -1,13 +1,16 @@
 <div class="rowcontainer" [style.background-color]="{notecolor}">
-    <div>
-        <img srcset="./assets/add_alert.png" width="25px" style="margin-right: 10px;"/>
+    <div class="image">
+         <img srcset="./assets/add_alert.png" width="25px" style="margin-right: 10px;"/>
+        <div class="text">Remind</div>
     </div>
-    <div>
+    <div class="image">
         <img srcset="./assets/person.png" width="25px" style="margin-right: 10px;"/>
+        <div class="text">Collab</div>
     </div>
 
-    <div>
+    <div class="image">
         <img [matMenuTriggerFor]="colormenu" srcset="./assets/palette.png" width="25px" style="margin-right: 10px;"/>
+        <div class="text">color</div>
         <mat-menu #colormenu="matMenu" class="colorrow">
             <div class="colorrow">
             <div *ngFor="let color of colorarray">
@@ -20,14 +23,17 @@
 
     </div>
     
-    <div>
+    <div class="image">
         <img srcset="./assets/imagesmode.png" width="25px" style="margin-right: 10px;"/>
+        <div class="text">image</div>
     </div>
-    <div>
+    <div class="image">
         <img srcset="./assets/archive.png" width="25px" style="margin-right: 10px;" (click)="isArchieve()"/>
+        <div class="text">Archieve</div>
     </div>
-    <div>
+    <div class="image">
         <img [matMenuTriggerFor]="menu" srcset="./assets/more.png" width="25px" style="margin-right: 10px;"/>
+        <div class="text">More</div>
         <mat-menu #menu="matMenu">
             <button mat-menu-item (click)="isTrash()">Delete Note</button>
             <button mat-menu-item>Add Label</button>

@@ -16,6 +16,11 @@
     
 }
 
+.setsearch{
+    margin-top: 3px;
+    height: 18px;
+}
+
 .search{
     width: 52vw;
     margin-left:80px;
@@ -29,6 +34,8 @@
     height: 35px;
     width: 49vw;
     border: none;
+    outline: none;
+    font-size: 20px;
   }
 
 .form-outline{

@@ -71,4 +71,14 @@ export class NoteserviceService {
     return this.httpservice.patchservice(`https://localhost:44323/api/Notes/UpdateColor?noteId=${reqdata.noteId}&color=${reqdata.colorId}`,reqdata,true,header)
   }
 
+  deletenote(noteId:any){
+    let header={
+      headers: new HttpHeaders({
+        'Content-Type':'application/json',
+        'Authorization':'Bearer '+this.token
+      })
+    }
+    return this.httpservice.deleteservice(`https://localhost:44323/api/Notes/DeleteNote?noteId=${noteId}`,true,header)
+  }
+
 }

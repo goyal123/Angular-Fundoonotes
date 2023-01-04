@@ -6,8 +6,9 @@
 .texttitle{
     border: none;
     font-size:15px;
-    height: 5vw;
-    width: 39.7vw;
+    height: 3vw;
+    margin-left: 10px;
+    width: 38vw;
 }
 
 .texttitle:focus{
@@ -17,5 +18,6 @@
 .lastrow{
     display: flex;
     flex-direction: row;
+    margin-top: 10px;
     justify-content: space-between;
 }

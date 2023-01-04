@@ -4,7 +4,13 @@
         <span class="row1" (click)="openDialog(note)">{{note.title}}</span>
         <span class="row1">{{note.description}}</span>
         <!-- <span>{{note.noteID}}</span> -->
-         <app-noteicons [noteID]="note.noteID" [notecolor]="note.color"></app-noteicons>
+        <div *ngIf="note.trash===true">
+            <app-trashicons [noteID]="note.noteID" [notecolor]="note.color" ></app-trashicons>
+        </div>
+        <div *ngIf="note.trash===false">
+            <app-noteicons [noteID]="note.noteID" [notecolor]="note.color"></app-noteicons>
+        </div>
+         
     </div>
     
 </div>

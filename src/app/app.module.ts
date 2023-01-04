@@ -31,6 +31,7 @@ import { TrashComponent } from './trash/trash.component';
 import {MatDialogModule, MatDialogRef} from '@angular/material/dialog';
 import { FormsModule } from '@angular/forms';
 import { AuthService } from './Services/auth.service';
+import { TrashiconsComponent } from './trashicons/trashicons.component';
 
 
 @NgModule({
@@ -49,7 +50,8 @@ import { AuthService } from './Services/auth.service';
     DisplaynotesComponent,
     UpdatenotesComponent,
     ArchieveComponent,
-    TrashComponent
+    TrashComponent,
+    TrashiconsComponent
   ],
   imports: [
     BrowserModule,
